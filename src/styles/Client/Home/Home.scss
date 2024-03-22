@@ -1,0 +1,200 @@
+/* Mixin */
+/* Set các giá trị với màn hình tương ứng */
+$mobile-width: 600px;
+$tablet-width: 668px;
+$desktop-width: 100%;
+
+@mixin mobile {
+    @media (max-width: #{$mobile-width}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+
+.Header_client {
+    background: #2474E5;
+    height: 72px;
+
+
+
+    .menu {
+
+        ul>li {
+            @include tablet {
+                font-size: 12px;
+                margin: 0 -30px;
+            }
+
+            @include mobile {
+                font-size: 12px;
+                margin: 0 -30px;
+            }
+        }
+
+    }
+
+    .option_btn {
+        a {
+            width: 130px;
+            height: 40px;
+
+            @include tablet {
+                font-size: 12px;
+            }
+
+            @include mobile {
+                font-size: 12px;
+            }
+
+        }
+
+    }
+}
+
+.bannerHome {
+    height: 28.5vw;
+
+    @include tablet {
+        height: 58vw;
+    }
+
+    @include mobile {
+        height: 200px;
+    }
+
+    .Baner_Wrapper {
+        width: 1016px;
+
+        .widget_baner {
+            height: 149px;
+
+            .row1_widget {
+                height: 61px;
+                padding-top: 5px;
+
+                a::after {
+                    content: '';
+                    background: #2474E5;
+                    width: 0;
+                    height: 2px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+
+                a:hover::after {
+                    width: 100%;
+                    animation: aniv1 0.2s;
+                }
+
+            }
+
+            .row2_widget {
+                height: 88px;
+
+                .section-widget-baner {
+                    width: 820px;
+                    height: 56px;
+                }
+
+                .search-widget-baner {
+                    width: 148px;
+                    height: 56px;
+
+                    button {
+                        background: #ffd333;
+                    }
+
+                    button:hover {
+                        background: #f3c51d;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.popular-route-component {
+    height: 362px;
+
+    .section-popular {
+        width: 980px;
+
+        .box_item {
+            display: grid;
+            grid-template-columns: 24% 24% 24% 24%;
+            justify-content: space-between;
+        }
+    }
+
+    .panigation-popular {
+        width: 56%;
+        top: 46%;
+
+        button:hover {
+            scale: 1.1;
+            opacity: 1;
+            border: none;
+        }
+    }
+}
+
+.Footer_Client {
+    height: 1236px;
+
+    .list-trip-parent {
+        background: #f2f2f2;
+        height: 1044px;
+        top: 0;
+
+        .list-trip {
+            width: 980px;
+            height: 100%;
+            top: 0;
+            grid-template-rows: 33% 33% 33%;
+
+            .v1 {
+                grid-template-columns: 60% 40%;
+                grid-template-rows: 272px;
+
+                .v2 {
+                    grid-template-columns: 43% 57%;
+                }
+            }
+
+            .s2 {
+                grid-template-columns: 26% 74%;
+                grid-template-rows: 272px;
+            }
+        }
+    }
+
+
+    .box2 {
+        height: 188px;
+        background: none;
+        bottom: 0;
+    }
+}
+
+@keyframes aniv1 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
