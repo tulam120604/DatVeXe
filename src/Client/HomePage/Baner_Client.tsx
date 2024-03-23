@@ -1,9 +1,8 @@
 import Baner_Wrapper from "./Baner_Wrapper"
 const Baner_Client = () => {
     return (<>
-        <div className="bannerHome">
-            <img className="h-full w-full" src="../../src/assets/Images/banner.jpg" alt="" />
-
+        <div className="bannerHome relative">
+            <img className="object-fill h-full w-full" src="../../src/assets/Images/banner.jpg" alt="" />
             <div style={{ transform: "translateY(-100%)", background: "rgba(0, 0, 0, 0.5)" }} className="voucher_baner w-full h-16 flex justify-center">
                 <div style={{ width: "775px" }} className="list_voucher flex justify-between items-center text-white text-base">
                     <section className="flex">
@@ -23,11 +22,9 @@ const Baner_Client = () => {
                         Thanh toán đa dạng
                     </section>
                 </div>
-                {/* baner wrapper */}
-                <div style={{ transform: 'translateY(-150%)' }} className="baner_wrapper absolute">
-                    <Baner_Wrapper />
-                </div>
-
+            </div>{/* baner wrapper */}
+            <div className="baner_wrapper w-full flex items-center justify-center inset-0 absolute">
+                <Baner_Wrapper />
             </div>
         </div>
     </>)

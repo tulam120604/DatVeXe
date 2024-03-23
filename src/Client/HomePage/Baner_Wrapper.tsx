@@ -4,7 +4,7 @@ const Baner_Wrapper = () => {
     return (<>
         <div className="Baner_Wrapper w-full h-52 text-center flex flex-col justify-between">
             <span className="text-2xl text-white">Vexere - Cam kết hoàn 150% nếu nhà xe không giữ chỗ</span>
-            <div className="widget_baner w-full bg-white rounded-lg  flex flex-col justify-around overflow-hidden items-center">
+            <div className="widget_baner w-full bg-white rounded-lg flex flex-col justify-around overflow-hidden items-center">
                 <div className="row1_widget flex justify-center">
                     <NavLink to={''} className="w-40 relative cursor-pointer relative duration-300 hover:text-blue-500 h-14 flex items-center justify-center">
                         <img className="mr-2.5" src="../../src/assets/Images/bus.png" alt="" />
@@ -28,7 +28,7 @@ const Baner_Wrapper = () => {
                     </NavLink>
                 </div>
 
-                <div className="row2_widget h-14 rounded-lg flex justify-between items-center overflow-hidden">
+                <div className="row2_widget rounded-lg flex justify-between items-center overflow-hidden">
                     <div className="section-widget-baner w-5/6 flex border rounded-lg">
                         <button className="w-1/4 h-full border-r flex items-center cursor-pointer hover:bg-slate-100 hover:text-blue-500 duration-300">
                             <div className="icon1 ml-4">
@@ -62,7 +62,7 @@ const Baner_Wrapper = () => {
                         </button>
                     </div>
                     <div className="search-widget-baner w-2/12 flex justify-end">
-                        <button className="w-5/6 h-full border-none rounded-lg duration-300">Tim kiem</button>
+                        <button className="w-5/6 h-full border-none font-semibold rounded-lg duration-300 text-lg">Tim kiem</button>
                     </div>
                 </div>
             </div>

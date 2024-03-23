@@ -32,7 +32,7 @@ const Footer_Client = () => {
                         </div>
                         <div className="text-black  flex flex-col text-left">
                             <span className="text-xl">Tin tức</span>
-                            <div className="list_route flex flex-col underline w-3/4 justify-between h-full mt-4 text-xs">
+                            <div className="list_route flex flex-col underline w-3/4 justify-between h-full mt-4 text-xs pr-0">
                                 <a href="">Xe giường nằm Limousine - đỉnh cao mới của
                                     ngành xe khách  </a>
                                 <a href="">Xe limousine đi Vũng Tàu: Tổng hợp top 6 xe
@@ -47,8 +47,8 @@ const Footer_Client = () => {
                     {/* --- */}
                     <div className="rows s2 mt-1 grid">
                         <div className="colum-child text-black  flex flex-col text-left">
-                            <span className="text-xl">Bến xe</span>
-                            <div className="list_route flex flex-col underline justify-between h-full mt-4 text-xs">
+                            <span className="text-xl whitespace-nowrap pb-0.5">Bến xe</span>
+                            <div className="list_route flex flex-col underline justify-between h-full mt-2.5 text-xs">
                                 <a href="">Bến xe Miền Đông </a>
                                 <a href="">Bến xe Trung tâm Đà Nẵng </a>
                                 <a href="">Bến xe Gia Lâm </a>
@@ -60,7 +60,7 @@ const Footer_Client = () => {
                         </div>
                         <section className="flex">
                             <div className="colum-child text-black  flex flex-col text-left pr-2">
-                                <span className="text-xl">Tuyến đường</span>
+                                <span className="text-xl whitespace-nowrap">Tuyến đường</span>
                                 <div className="list_route flex flex-col underline justify-between mt-2 mr-4 text-sm">
                                     <a className="mt-2.5 py-0.5" href="">Xe Liên Hưng</a>
                                     <a className="mt-2.5 py-0.5" href="">Xe Long Vân Limosine</a>
@@ -141,7 +141,7 @@ const Footer_Client = () => {
                                 </div>
                                 <span className="text-xl mt-5">Chứng nhận</span>
                             </div>
-                            <div className="text-black  flex flex-col text-left mx-5">
+                            <div className="colum-child whitespace-nowrap text-black  flex flex-col text-left mx-5">
                                 <span className="text-xl">Đối tác thanh toán</span>
                             </div>
                             <div className="colum-child  text-black  flex flex-col text-left">
