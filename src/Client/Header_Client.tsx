@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Header_Client = () => {
     return (<>
         <div className="Header_client w-full flex justify-between items-center">
@@ -5,7 +7,7 @@ const Header_Client = () => {
                 <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
                     <div className="flex h-16 items-center justify-between">
                         <div className="flex-1 md:flex md:items-center md:gap-12">
-                            <a className="block text-teal-600 pr-12" href="#">
+                            <Link to={'/'} className="block text-teal-600 pr-12">
                                 <svg width={148} height={40} viewBox="0 0 148 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clipPath="url(#clip0_1_6)">
                                         <g clipPath="url(#clip1_1_6)">
@@ -40,7 +42,7 @@ const Header_Client = () => {
                                         </clipPath>
                                     </defs>
                                 </svg>
-                            </a>
+                            </Link>
                         </div>
                         <div className="md:flex md:items-center md:gap-12">
                             <nav aria-label="Global" className="menu hidden md:block">
