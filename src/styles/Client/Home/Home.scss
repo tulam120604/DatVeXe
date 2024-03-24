@@ -24,11 +24,7 @@ $desktop-width: 1440px;
 
 
 .Header_client {
-    background: #2474E5;
-    height: 72px;
-
     .menu {
-
         ul>li {
             @include tablet {
                 font-size: 12px;
@@ -45,9 +41,6 @@ $desktop-width: 1440px;
 
     .option_btn {
         a {
-            width: 130px;
-            height: 40px;
-
             @include tablet {
                 font-size: 12px;
             }
@@ -62,16 +55,6 @@ $desktop-width: 1440px;
 }
 
 .bannerHome {
-    height: 480px;
-
-    @include tablet {
-        height: 380px;
-    }
-
-    @include mobile {
-        height: 380px;
-    }
-
     .list_voucher {
         @include tablet {
             font-size: 14px;
@@ -83,20 +66,16 @@ $desktop-width: 1440px;
     }
 
     .Baner_Wrapper {
-        width: 1016px;
-        height: auto;
-        border-radius: 10px;
-
         @include tablet {
-            height: auto;
-
             span {
                 font-size: 18px;
             }
+
+            margin-bottom: 20px;
         }
 
         @include mobile {
-            width: 600px;
+            width: 100%;
             height: auto;
             margin-top: -50px;
             padding: 0;
@@ -107,14 +86,8 @@ $desktop-width: 1440px;
         }
 
         .widget_baner {
-            height: 150px;
-            padding: 0;
-            position: relative;
 
             .row1_widget {
-                height: 61px;
-                padding-top: 5px;
-
                 a::after {
                     content: '';
                     background: #2474E5;
@@ -129,35 +102,11 @@ $desktop-width: 1440px;
                     width: 100%;
                     animation: aniv1 0.2s;
                 }
-
-            }
-
-            .row2_widget {
-                width: 1016px;
-
-                .section-widget-baner {
-                    width: 820px;
-                    height: 56px;
-                    margin-left: 16px;
-                }
-
-                .search-widget-baner {
-                    height: 56px;
-                    margin-right: 16px;
-
-                    button {
-                        background: #ffd333;
-                    }
-
-                    button:hover {
-                        background: #ffe37e;
-                    }
-                }
             }
 
             @include tablet {
                 font-size: 14px;
-                height: 215px;
+                height: auto;
 
                 .row1_widget {
                     margin-top: -20px;
@@ -165,13 +114,13 @@ $desktop-width: 1440px;
 
                 .row2_widget {
                     width: 90%;
-                    height: 120px;
+                    height: auto;
                     display: grid;
                     grid-template-columns: 100%;
 
                     .section-widget-baner {
                         width: 100%;
-                        margin: 0;
+                        margin: 0 0 10px 0;
 
                         button {
                             section {
@@ -196,6 +145,7 @@ $desktop-width: 1440px;
                             justify-content: center;
                             align-items: center;
                             font-size: 16px;
+                            margin: 0;
                         }
                     }
                 }
@@ -203,7 +153,7 @@ $desktop-width: 1440px;
 
             @include mobile {
                 font-size: 12px;
-                height: 235px;
+                height: auto;
 
                 .row1_widget {
                     width: 80%;
@@ -228,7 +178,7 @@ $desktop-width: 1440px;
                         height: 100px;
                         overflow: hidden;
 
-                        button {
+                        .btn-trip {
                             width: 100%;
                             height: 50px;
 
@@ -245,12 +195,12 @@ $desktop-width: 1440px;
 
                         }
 
-                        button:nth-child(2) {
+                        .btn-trip:nth-child(2) {
                             border-right: none;
                             border-bottom: 1px solid rgb(228, 228, 228);
                         }
 
-                        button:nth-child(3) {
+                        .btn-trip:nth-child(3) {
                             border-top: 1px solid rgb(228, 228, 228);
                         }
                     }
@@ -267,6 +217,7 @@ $desktop-width: 1440px;
                             justify-content: center;
                             align-items: center;
                             font-size: 14px;
+                            margin: 0;
                         }
                     }
                 }
@@ -275,31 +226,74 @@ $desktop-width: 1440px;
     }
 }
 
-.bannerDeital {
-    height: 150px;
-}
 
 .bannerDeital {
     @include tablet {
         margin-top: 40px;
+
+        .Baner_Wrapper {
+            top: 20px;
+            height: 240px;
+
+            .row1_widget {
+                transform: translateY(-20px);
+            }
+
+            .row2_widget {
+                transform: translateY(-35px);
+
+                .section-widget-baner {
+                    padding: 2px 0;
+                }
+
+                .search-widget-baner button {
+                    width: 100%;
+                    margin: 15px 0 0 0;
+                }
+            }
+        }
     }
 
     @include mobile {
         margin-top: 70px;
+
+        .Baner_Wrapper {
+            transform: translateY(40px);
+
+            .row1_widget {
+                transform: translateY(-15px);
+                padding-top: 5px;
+                border: none;
+            }
+
+            .row2_widget {
+                transform: translateY(-30px);
+                padding-bottom: 140px;
+
+                .section-widget-baner {
+                    padding: 2px 0;
+                    height: 50%;
+                }
+
+                .search-widget-baner button {
+                    width: 100%;
+                    height: 80%;
+                    margin: 0;
+                }
+            }
+        }
     }
 }
 
 .main_deital {
     background: #f2f2f2;
     margin: 0px 0 -50px;
-    padding: 20px 0;
 
 
     .main_deital_page {
         width: 1016px;
 
         @include tablet {
-            padding-top: 50px;
             display: grid;
             grid-template-columns: 30% 65%;
             font-size: 14px;
@@ -431,11 +425,6 @@ $desktop-width: 1440px;
 .popular-route-component {
     height: 362px;
 
-    @include tablet {
-        height: 600px;
-        margin-top: -50px;
-    }
-
     @include mobile {
         height: 650px;
         margin-top: -50px;
@@ -447,14 +436,19 @@ $desktop-width: 1440px;
     }
 
     .section-popular {
-        width: 980px;
+        margin-top: 100px;
+
+        @include tablet {
+            margin-top: 0;
+        }
+
+        @include mobile {
+            margin-top: 0;
+        }
 
         .box_item {
             display: grid;
             grid-template-columns: 24% 24% 24% 24%;
-            justify-content: space-between;
-
-
         }
 
         @include mobile {
@@ -479,15 +473,6 @@ $desktop-width: 1440px;
     }
 
     .panigation-popular {
-        width: 930px;
-        top: 46%;
-
-        button:hover {
-            scale: 1.1;
-            opacity: 1;
-            border: none;
-        }
-
         @include mobile {
             width: 100px;
         }
@@ -500,41 +485,22 @@ $desktop-width: 1440px;
 }
 
 .Footer_Client {
-    height: 1236px;
+    .list-trip {
+        grid-template-rows: 33% 33% 33%;
 
-    .list-trip-parent {
-        background: #f2f2f2;
-        height: 1044px;
-        top: 0;
+        .v1 {
+            grid-template-columns: 60% 40%;
+            grid-template-rows: 272px;
 
-        .list-trip {
-            width: 980px;
-            height: 100%;
-            top: 0;
-            grid-template-rows: 33% 33% 33%;
-
-            .v1 {
-                grid-template-columns: 60% 40%;
-                grid-template-rows: 272px;
-
-                .v2 {
-                    width: 100%;
-                    grid-template-columns: 43% 57%;
-                }
-            }
-
-            .s2 {
-                grid-template-columns: 26% 74%;
-                grid-template-rows: 272px;
+            .v2 {
+                grid-template-columns: 43% 57%;
             }
         }
-    }
 
-
-    .box2 {
-        height: 188px;
-        background: none;
-        bottom: 0;
+        .s2 {
+            grid-template-columns: 26% 74%;
+            grid-template-rows: 272px;
+        }
     }
 }
 
@@ -551,11 +517,11 @@ $desktop-width: 1440px;
 .Footer_Client {
     @include mobile {
         width: 100%;
-        height: 1500px;
+        height: auto;
 
         .list-trip-parent {
             background: #f2f2f2;
-            height: 1300px;
+            height: 1050px;
             top: 0;
 
             .list-trip {
@@ -592,12 +558,12 @@ $desktop-width: 1440px;
 
                         .list_router {
                             height: 500px;
-                            border: 1px solid red;
                         }
                     }
                 }
 
                 .s2 {
+                    margin-top: 50px;
                     grid-template-columns: 26% 74%;
                     grid-template-rows: 272px;
 
@@ -616,6 +582,21 @@ $desktop-width: 1440px;
                     }
 
                 }
+
+                .rowsvs2 {
+                    grid-template-columns: 50% 50%;
+                    margin-top: 70px;
+                }
+
+                .vs2 {
+                    display: grid;
+                    grid-template-columns: 100%;
+                    grid-auto-rows: 2;
+
+                    .downapp {
+                        margin-top: -235px;
+                    }
+                }
             }
         }
 
@@ -625,7 +606,6 @@ $desktop-width: 1440px;
             background: none;
             bottom: 0;
             font-size: 12px;
-            padding-bottom: 10px;
 
             span {
                 @include mobile {
@@ -644,7 +624,7 @@ $desktop-width: 1440px;
 
         .list-trip-parent {
             background: #f2f2f2;
-            height: 1150px;
+            height: 1050px;
             top: 0;
 
             .list-trip {
@@ -705,7 +685,14 @@ $desktop-width: 1440px;
                     a {
                         margin-top: 0px;
                     }
+                }
 
+                .vs2 {
+                    margin-top: 0px;
+
+                    .downapp {
+                        margin-left: 40px;
+                    }
                 }
             }
         }

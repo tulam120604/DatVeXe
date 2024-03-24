@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom"
+import Btn from "./ListComponent/Btn"
 
 const Header_Client = () => {
     return (<>
-        <div className="Header_client w-full flex justify-between items-center">
+        <div className="Header_client w-full flex justify-between items-center bg-[#2474e5] h-[72px]">
             <header className="bg-blue w-full">
                 <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
                     <div className="flex h-16 items-center justify-between">
@@ -53,23 +54,11 @@ const Header_Client = () => {
                                 </ul>
                             </nav>
                             <div className="flex items-center gap-4">
-                                <div className="option_btn sm:flex sm:gap-4 text-black">
+                                <div className="option_btn sm:flex sm:gap-4 text-black ">
                                     <div className="hidden sm:flex">
-                                        <a
-                                            className="rounded-md bg-white flex justify-center items-center text-sm font-medium shadow "
-                                            href="#"
-                                        >
-                                            Hotline 24/7
-                                        </a>
+                                        <Btn nameBtn={'Hotline 24/7'} />
                                     </div>
-                                    <a
-                                        className="rounded-md bg-white  flex justify-center items-center text-sm font-medium"
-                                        href="#"
-                                    >
-                                        Đăng nhập
-                                    </a>
-
-
+                                    <Btn nameBtn={'Dang nhap'} />
                                 </div>
                                 <div className="block md:hidden">
                                     <button className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
